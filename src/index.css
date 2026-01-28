@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root{
+    background-color: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background: #000;
+}
+/* CLOUD SHAPE */
+.cloud-shape {
+  width: 380px;
+  height: 150px;
+  background: linear-gradient(135deg, #e6b95a, #f0b638);
+  border-radius: 120px;
+  filter: blur(0.3px);
+  position: relative;
+  box-shadow: 0 0 80px rgba(240, 182, 56, 0.7);
+}
+
+.cloud-shape::before,
+.cloud-shape::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(135deg, #efd395, #f7c049);
+  border-radius: 50%;
+}
+
+.cloud-shape::before {
+  width: 180px;
+  height: 180px;
+  top: -80px;
+  left: 40px;
+}
+
+.cloud-shape::after {
+  width: 220px;
+  height: 220px;
+  top: -100px;
+  right: 40px;
+}
