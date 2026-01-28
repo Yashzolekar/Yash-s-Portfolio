@@ -47,7 +47,7 @@ export default function Projects() {
         },
     ];
 
-    const categories = ["AWS Services", "CI/CD", "Monitoring"];
+    const categories = ["AWS Services", "CI/CD", "Monitoring","Database & Storage"];
 
     const filtered = active === "All"
         ? allProjects
