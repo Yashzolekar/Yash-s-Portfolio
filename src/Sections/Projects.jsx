@@ -1,6 +1,6 @@
-import { ExternalLink } from "lucide-react";
 import { useState } from "react";
 import ProjectCards from "../Components/ProjectCard";
+// Fixed filtering logic v2
 
 export default function Projects() {
     const [active, setActive] = useState("AWS Services");
@@ -53,9 +53,9 @@ export default function Projects() {
         },
     ];
 
-    const categories = ["AWS Services", "CI/CD", "Monitoring","Database & Storage"];
+    const categories = ["AWS Services", "CI/CD", "Monitoring", "Database & Storage"];
 
-    const filtered = active === "All"
+    const filtered = active === "AWS Services"
         ? allProjects
         : allProjects.filter((proj) => proj.category === active);
 
@@ -78,8 +78,8 @@ export default function Projects() {
                             key={cat}
                             onClick={() => setActive(cat)}
                             className={`px-5 py-1.5 rounded-full text-sm font-semibold transition-all duration-300
-                                ${active === cat 
-                                    ? "bg-[#f0b638] text-black shadow-lg" 
+                                ${active === cat
+                                    ? "bg-[#f0b638] text-black shadow-lg"
                                     : "text-gray-400 hover:text-[#f0b638] border border-gray-800"}`}
                         >
                             {cat}
