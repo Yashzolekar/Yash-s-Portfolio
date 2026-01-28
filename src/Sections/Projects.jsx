@@ -49,7 +49,7 @@ export default function Projects() {
             title: "MySQL RDS Deployment",
             description: "Set up and managed a MySQL database using Amazon RDS. Configured database settings, connectivity, and basic security for reliable data storage.",
             languages: ["RDS database", "MySQL", "AWS"],
-            category: "AWS Services",
+            category: "Database & Storage",
         },
     ];
 
