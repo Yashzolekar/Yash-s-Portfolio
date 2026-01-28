@@ -2,6 +2,8 @@ import { useState } from "react";
 import ProjectCards from "../Components/ProjectCard";
 // Fixed filtering logic v2
 
+// Fixed filtering logic v3
+
 export default function Projects() {
     const [active, setActive] = useState("AWS Services");
 
@@ -55,7 +57,7 @@ export default function Projects() {
 
     const categories = ["AWS Services", "CI/CD", "Monitoring", "Database & Storage"];
 
-    const filtered = active === "AWS Services"
+    const filtered = active === "All"
         ? allProjects
         : allProjects.filter((proj) => proj.category === active);
 
